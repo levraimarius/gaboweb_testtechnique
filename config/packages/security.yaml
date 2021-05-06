@@ -1,0 +1,27 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+    providers:
+        users_in_memory: { memory: null }
+        users:
+            entity:
+                class: App\Entity\User
+                property: username
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            lazy: true
+            provider: users_in_memory
+            guard:
+                authenticators:
+                    - App\Security\LoginAuthenticator
+                entry_point: App\Security\LoginAuthenticator
+            logout:
+                path: app_logout
+
+    access_control:
+        - { path: ^/home, roles: IS_AUTHENTICATED_FULLY}

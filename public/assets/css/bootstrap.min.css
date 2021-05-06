@@ -1,0 +1,44 @@
+/*
+    -- Root colors
+*/
+:root {
+    --firstGrad: #3a3a3a;;
+    --secondGrad: #6d6d6d;
+    --borderColor: #000000;
+}
+
+/*
+    General style
+*/
+html, body {height: 100% !important;}
+
+body {
+    background: fixed linear-gradient(120deg, var(--firstGrad) 0%, var(--secondGrad) 100%);
+}
+
+/*
+    Navbar style
+*/
+.navbar {
+    border-bottom: 1px solid var(--borderColor);
+    padding: 15px;
+}
+
+/*
+    Form style
+*/
+form {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--borderColor);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.800);
+}
+
+/*
+    Footer style
+*/
+footer {
+    border-top: 1px solid var(--borderColor);
+    padding: 15px;
+}

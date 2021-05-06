@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+{% block title %}Bienvenue {{ app.user.username }}{% endblock %}
+{% block body %}
+    <div class="container container-fluid bg-light" style="height: 100% !important;">
+        <p>Bienvenue {{ app.user.username }}</p>
+    </div>
+{% endblock body %}

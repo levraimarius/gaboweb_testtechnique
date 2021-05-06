@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container container-fluid">
+        {% if app.user %}
+            <div class="card p-4 rounded bg-light">
+                <div class="carb-body text-center">
+                    <p>Vous êtes déjà connecter en tant que {{ app.user.username }} !</p> <a type="button" class="btn btn-danger" href="{{ path('app_logout') }}">Déconnexion</a>
+                </div>
+            </div>
+        {% endif %}
+        
+        <form method="post" class="text-center col-3 p-4 rounded bg-light">
+            {% if error %}
+                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <h4 class="text-uppercase float-right mb-4">Connexion</h4>
+            <div class="mb-4">
+                <input type="text" value="{{ last_username }}" placeholder="Login" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus>
+            </div>
+            <div class="mb-4">
+                <input type="password" placeholder="Password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            <button class="btn btn-primary rounded-0" type="submit">GO</button>
+        </form>
+    </div>
+{% endblock %}

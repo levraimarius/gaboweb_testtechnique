@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+{% block title %}Il y a un problème !{% endblock %}
+{% block body %}
+    <h1>Page introuvable !</h1>
+    <p>La page demandée n'a pas pu être localisée. Vérifier s'il n'y a pas de faute d'orthographe dans l'URL ou <a href="{{ path('homepage') }}">retournez à la page d'accueil</a>.</p>
+{% endblock %}
