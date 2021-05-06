@@ -1,5 +1,5 @@
 # Guide d'installation
-Bonjour, voici le guide pour l'installation du test technique crée en Symfony.
+Bonjour, voici le guide pour l'installation du test technique créé en Symfony.
 
 Les pré-requis :
 - **[Symfony](https://symfony.com/download)**
@@ -25,7 +25,7 @@ php bin/console doctrine:database:create
 ```
 php bin/console doctrine:migrations:migrate
 ```
-→ Permet d'envoyer des données déjà configurée dans la base de données. **(vous tapez "yes")**
+→ Permet d'envoyer des données déjà configurées dans la base de données. **(vous tapez "yes")**
 ```
 php bin/console doctrine:fixtures:load
 ```
