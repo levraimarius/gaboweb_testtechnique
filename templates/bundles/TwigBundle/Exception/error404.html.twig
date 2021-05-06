@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block title %}Il y a un problème !{% endblock %}
 {% block body %}
-    <h1>Page introuvable !</h1>
-    <p>La page demandée n'a pas pu être localisée. Vérifier s'il n'y a pas de faute d'orthographe dans l'URL ou <a href="{{ path('homepage') }}">retournez à la page d'accueil</a>.</p>
+    <div class="container container-fluid bg-light" style="height: 100% !important;">
+        <h1>Page introuvable !</h1>
+        <p>La page demandée n'a pas pu être localisée. Vérifier s'il n'y a pas de faute d'orthographe dans l'URL ou <a href="{{ path('homepage') }}">retournez à la page d'accueil</a>.</p>
+        <div class="text-center mt-5">
+            <img src="{{ asset('assets/images/logo.png') }}" alt="Logo GaboWeb" width="200" height="50">
+        </div>
+    </div>
 {% endblock %}
